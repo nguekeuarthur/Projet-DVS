@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
+
+# Node
+node_modules/
+
+# Fonts (if you keep them separately)
+fonts/
+
+# VSCode
+.vscode/
+
+# Build
+dist/
+
+# Misc
+*.tmp
+*.bak
+
+# Secrets
+.env
