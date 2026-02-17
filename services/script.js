@@ -227,18 +227,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ============================================================================
-    // 5. EFFETS DE HOVER SUR LES CARDS
+    // 5. EFFET FLIP CARDS - Géré entièrement par CSS 3D
     // ============================================================================
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-8px)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-        });
-    });
+    // L'effet flip card est maintenant géré par CSS avec les propriétés transform-style: preserve-3d
+    // et la rotation rotateY(180deg). Aucun JavaScript supplémentaire n'est nécessaire.
     
     console.log('✅ Tous les scripts sont initialisés');
 });

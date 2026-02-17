@@ -29,7 +29,7 @@
                         <a href="#services" class="dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
                         <ul class="dropdown-menu">
                             <li><a href="home/">Déjà Vu Home</a></li>
-                            <li><a href="services/">Déjà Vu Services</a></li>
+                            <li><a href="services/services.html">Déjà Vu Services</a></li>
                             <li><a href="collection/">Déjà Vu Collection</a></li>
                         </ul>
                     </li>
@@ -53,16 +53,19 @@
     <section class="hero">
         <div class="hero-slider">
             <div class="hero-slide active">
-                <img src="images/geneve.jpg" alt="Immeuble moderne illuminé" onerror="this.style.display='none'">
+                <img src="images/Zurich.avif" alt="Zurich" onerror="this.style.display='none'">
             </div>
             <div class="hero-slide">
-                <img src="images/geneve1.jpg" alt="Propriété de luxe" onerror="this.style.display='none'">
+                <img src="images/Valais 8.jpg" alt="Valais" onerror="this.style.display='none'">
             </div>
             <div class="hero-slide">
-                <img src="images/geneve2.jpg" alt="Architecture moderne" onerror="this.style.display='none'">
+                <img src="images/Riviera 6.jpeg" alt="Riviera" onerror="this.style.display='none'">
             </div>
             <div class="hero-slide">
-                <img src="images/geneve3.jpg" alt="Intérieur élégant" onerror="this.style.display='none'">
+                <img src="images/Lausanne 2.jpg" alt="Lausanne" onerror="this.style.display='none'">
+            </div>
+            <div class="hero-slide">
+                <img src="images/Berne.avif" alt="Berne" onerror="this.style.display='none'">
             </div>
         </div>
         <div class="hero-overlay"></div>
@@ -79,6 +82,7 @@
             <span class="dot" data-slide="1"></span>
             <span class="dot" data-slide="2"></span>
             <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
         </div>
     </section>
 
@@ -87,30 +91,57 @@
         <div class="container">
             <div class="nav-cards">
                 <!-- Card 1: Home -->
-                <div class="nav-card">
-                    <div class="card-icon blue">
-                        <img src="images/Déjà vu Home.png" alt="Déjà Vu Home" class="card-logo">
+                <div class="flip-container">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-icon blue">
+                                    <img src="images/Déjà vu Home.png" alt="Déjà Vu Home" class="card-logo">
+                                </div>
+                                <h3>Découvrez notre<br>performance dans<br>l'immobilier</h3>
+                            </div>
+                            <div class="flip-card-back blue-back">
+                                <p>Nous vous offrons nos services d'experts dans l'immobilier de prestige, la recherche de biens exclusifs et l'assistance pour tous vos besoins immobiliers.</p>
+                                <a href="home.html" class="btn-outline-white">HOME</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Découvrez notre<br>performance dans<br>l'immobilier</h3>
-                    <a href="home.html" class="btn-outline">HOME</a>
                 </div>
 
                 <!-- Card 2: Services -->
-                <div class="nav-card">
-                    <div class="card-icon red">
-                        <img src="images/Déjà vu Services.png" alt="Déjà Vu Services" class="card-logo">
+                <div class="flip-container">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-icon red">
+                                    <img src="images/Déjà vu Services.png" alt="Déjà Vu Services" class="card-logo">
+                                </div>
+                                <h3>Faites appel à des services de<br>conciergerie sur mesure</h3>
+                            </div>
+                            <div class="flip-card-back red-back">
+                                <p>Services de conciergerie privée d'exception pour tous vos besoins : voyages, événements, gastronomie, famille et bien plus.</p>
+                                <a href="services/services.html" class="btn-outline-white">SERVICES</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Faites appel à des services de<br>conciergerie sur mesure</h3>
-                    <a href="services.html" class="btn-outline">SERVICES</a>
                 </div>
 
                 <!-- Card 3: Collection -->
-                <div class="nav-card">
-                    <div class="card-icon orange">
-                        <img src="images/Déjà vu Collection.png" alt="Déjà Vu Collection" class="card-logo">
+                <div class="flip-container">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-icon orange">
+                                    <img src="images/Déjà vu Collection.png" alt="Déjà Vu Collection" class="card-logo">
+                                </div>
+                                <h3>Découvrez nos<br>magnifiques<br>objets d'art</h3>
+                            </div>
+                            <div class="flip-card-back orange-back">
+                                <p>Découvrez notre sélection d'objets rares, de montres de prestige et d'œuvres d'art soigneusement sélectionnées pour les collectionneurs avertis.</p>
+                                <a href="collection.html" class="btn-outline-white">COLLECTION</a>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Découvrez nos<br>magnifiques<br>objets d'art</h3>
-                    <a href="collection.html" class="btn-outline">COLLECTION</a>
                 </div>
             </div>
         </div>
@@ -125,17 +156,8 @@
                 <div class="about-content text-right">
                     <h2 class="section-title">ENTREPRISE</h2>
                     <div class="about-description">
-                        <p>Déjà Vu Switzerland est un groupe d'experts actifs dans l'immobilier, le service de
-                            conciergerie et la recherche d'objets rares (collections de montres, bijoux anciens, art).
-                        </p>
-                        <p>Nous prenons en charge toutes vos demandes, de la recherche d'une école pour vos enfants, au
-                            cours de yoga ou au club de fitness, en passant par l'organisation de votre voyage
-                            d'affaires en jet privé et de vos vacances.</p>
-                        <p>Malika C. David et son équipe savent s'adapter à tous les univers ainsi qu'à toutes les
-                            cultures, les amenant à fréquenter dirigeants et responsables de ce monde afin de vous faire
-                            bénéficier d'ouvertures extraordinaires.</p>
-                        <p>La confidentialité, l'excellence et la sensibilité sont les valeurs cardinales de leur
-                            approche qui se distingue par un code éthique et un contrat de confiance.</p>
+                        <p>Déjà Vu Switzerland est un groupe d'experts actifs dans l'immobilier, le service de conciergerie et la recherche d'objets rares. Nous prenons en charge toutes vos demandes, de la recherche d'une école pour vos enfants à l'organisation de votre voyage d'affaires en jet privé.</p>
+                        <p>Malika C. David et son équipe s'adaptent à tous les univers et cultures, vous faisant bénéficier d'ouvertures extraordinaires. Confidentialité, excellence et sensibilité sont nos valeurs cardinales.</p>
                     </div>
                 </div>
             </div>
@@ -156,24 +178,12 @@
                 <div class="about-content text-left">
                     <h2 class="section-title">L'ENVIRONNEMENT À COEUR</h2>
                     <div class="about-description">
-                        <p>Déjà Vu Switzerland ainsi que ses sociétés filles s'engagent formellement à préserver la
-                            planète pour nos enfants et les générations futures.</p>
-                        <p>Cet engagement repose sur les trois piliers de son système de management environnemental
-                            selon la norme ISO 14 001.</p>
-                        <p>Une liste ci-dessous non exhaustive des actions concrètes que tous les membres de Déjà-vu
-                            Switzerland intègrent dans leur quotidien.</p>
+                        <p>Déjà Vu Switzerland s'engage à préserver la planète selon la norme ISO 14 001. Nos actions :</p>
                         <ul class="environment-list">
-                            <li>Utilisation rationnelle et optimale des ressources</li>
-                            <li>Préservation des ressources naturelles</li>
-                            <li>Maîtrise des risques et réduction de l'empreinte carbone : réduction des rejets
-                                atmosphériques, amélioration de la gestion des déchets, maîtrise des consommations
-                                d'énergie et d'eau</li>
-                            <li>Amélioration de l'impact visuel</li>
-                            <li>Transparence à l'égard des parties prenantes</li>
+                            <li>Utilisation rationnelle des ressources et préservation de la nature</li>
+                            <li>Réduction de l'empreinte carbone et gestion responsable des déchets</li>
+                            <li>Transparence et amélioration continue de notre performance environnementale</li>
                         </ul>
-                        <p>Ces axes sont déclinés dans l'ensemble de l'entreprise en objectifs opérationnels, mesurables
-                            et revus annuellement dans une démarche d'amélioration continue de sa performance
-                            environnementale.</p>
                     </div>
                 </div>
             </div>
@@ -196,11 +206,26 @@
                 <div class="teteatete-image-wrapper large">
                     <img src="images/teteatete1.jpg" alt="Interview - Caméra professionnelle" onerror="this.style.display='none'">
                 </div>
-                <div class="teteatete-image-wrapper">
+                <div class="teteatete-image-wrapper profile-card-overlay">
                     <img src="images/teteatete2.jpg" alt="Interview - Tête-à-tête" onerror="this.style.display='none'">
+                    <div class="profile-overlay-data">
+                        <h3>Jérôme Aké Béda</h3>
+                        <p class="profile-overlay-role">Sommelier et Maître d'Hôtel</p>
+                        <p>Sommelier et Maître d'Hôtel chez l'Auberge de l'Onde, Jérôme est aussi un poète du chasselas distingué.</p>
+                        <p>Depuis son arrivée, il a eu la révélation du vin suisse auquel il a consacré trois livres.</p>
+                        <p>Il a été élu Sommelier suisse de l'année par le Gault & Millau en 2015, Commandeur de l'Ordre des Vins vaudois en 2018.</p>
+                        <a href="https://www.instagram.com/dejavuswitzerland/?hl=fr" target="_blank" rel="noopener noreferrer">Découvrir l'interview</a>
+                    </div>
                 </div>
-                <div class="teteatete-image-wrapper">
+                <div class="teteatete-image-wrapper profile-card-overlay">
                     <img src="images/teteatete3.jpg" alt="Interview - Rencontre professionnelle" onerror="this.style.display='none'">
+                    <div class="profile-overlay-data">
+                        <h3>Petar Mitrovic</h3>
+                        <p class="profile-overlay-role">Photographe Engagé et Humaniste</p>
+                        <p>Découvrez l'histoire émouvante de Petar Mitrovic, un photographe engagé et humaniste (membre de l'USPP – Union Suisse des Photographes Professionnels).</p>
+                        <p>La photographie est un outil puissant que Petar utilise pour passer des messages. Ses travaux lui ont valu la distinction en tant que "Personnalité Suisse-Romande" en 2020.</p>
+                        <a href="https://www.instagram.com/dejavuswitzerland/?hl=fr" target="_blank" rel="noopener noreferrer">Découvrir l'interview</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -268,7 +293,7 @@
                         <h4>NOS FILIALES</h4>
                         <ul>
                             <li><a href="home.html">Déjà Vu Home</a></li>
-                            <li><a href="services.html">Déjà Vu Services</a></li>
+                            <li><a href="services/services.html">Déjà Vu Services</a></li>
                             <li><a href="collection.html">Déjà Vu Collection</a></li>
                         </ul>
                         <h4 style="margin-top: 1.5rem;">SERVICES</h4>
@@ -371,7 +396,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 Déjà Vu Switzerland. Tous droits réservés.</p>
+                <p class="copyright">&copy; 2025 Déjà Vu Switzerland. Tous droits réservés.</p>
                 <div class="footer-legal">
                     <a href="#legal">Mentions Légales</a>
                     <span class="separator">•</span>
