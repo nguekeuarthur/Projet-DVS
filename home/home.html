@@ -14,18 +14,15 @@
     <!-- Header -->
     <header class="main-header home-header">
         <div class="container">
-            <a href="../index.html" class="logo">
+            <a href="./home.html" class="logo">
                 <img src="../images/Déjà vu Home.png" alt="Déjà Vu Home" class="logo-image">
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="./home.html">Accueil</a></li>
                     <li><a href="./dr-house.html">Dr House</a></li>
                     <li><a href="./socius.html">Socius</a></li>
                     <li><a href="./euronews.html">Euronews</a></li>
                     <li><a href="./famille.html">Famille</a></li>
-                    <li><a href="./vente.html">Vente</a></li>
-                    <li><a href="./location.html">Location</a></li>
                     <li><a href="../contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -167,6 +164,358 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Section: Autres Services -->
+            <section id="services" class="content-section-detailed services-cards-section">
+                <div class="title-wrapper">
+                    <div class="title-circle"></div>
+                    <h2>Autres Services</h2>
+                </div>
+                
+                <div class="services-cards-grid">
+                    <!-- Card 1: Vente -->
+                    <div class="service-card" data-service="vente">
+                        <div class="service-card-content">
+                            <h3>Vente</h3>
+                            <div class="service-card-overlay">
+                                <p class="service-summary">
+                                    Découvrez nos biens d'exception et bénéficiez d'un accompagnement personnalisé pour votre projet immobilier.
+                                </p>
+                                <button class="btn-voir-plus" data-modal="modal-vente">
+                                    Voir Plus
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Location -->
+                    <div class="service-card" data-service="location">
+                        <div class="service-card-content">
+                            <h3>Location</h3>
+                            <div class="service-card-overlay">
+                                <p class="service-summary">
+                                    Logements meublés ou non, correspondant à vos critères avec un service clé en main personnalisé.
+                                </p>
+                                <button class="btn-voir-plus" data-modal="modal-location">
+                                    Voir Plus
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Relocation -->
+                    <div class="service-card" data-service="relocation">
+                        <div class="service-card-content">
+                            <h3>Relocation</h3>
+                            <div class="service-card-overlay">
+                                <p class="service-summary">
+                                    Studios modernes et confortables, entièrement équipés pour vos séjours courts ou longs en Suisse.
+                                </p>
+                                <button class="btn-voir-plus" data-modal="modal-relocation">
+                                    Voir Plus
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Maison -->
+                    <div class="service-card" data-service="maison">
+                        <div class="service-card-content">
+                            <h3>Maison</h3>
+                            <div class="service-card-overlay">
+                                <p class="service-summary">
+                                    Service global pour votre intérieur avec linges de maison de luxe et literies de qualité européenne.
+                                </p>
+                                <button class="btn-voir-plus" data-modal="modal-maison">
+                                    Voir Plus
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Ameublement -->
+                    <div class="service-card" data-service="ameublement">
+                        <div class="service-card-content">
+                            <h3>Ameublement</h3>
+                            <div class="service-card-overlay">
+                                <p class="service-summary">
+                                    Spécialistes en aménagement d'intérieurs avec mobilier design, confortable et respectueux de l'environnement.
+                                </p>
+                                <button class="btn-voir-plus" data-modal="modal-ameublement">
+                                    Voir Plus
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MODALS POUR CHAQUE SERVICE -->
+            <!-- Modal Vente -->
+            <div id="modal-vente" class="service-modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close">&times;</button>
+                    <div class="modal-body">
+                        <h2>Vente</h2>
+                        <div class="modal-scroll">
+                            <p>Spécialistes en vente immobilière haut de gamme depuis plus de 15 ans, nous mettons à votre disposition une expertise reconnue pour vendre votre propriété aux meilleurs prix. Nos consultants connaissent le marché immobilier suisse sur le bout des doigts.</p>
+                            
+                            <p>Nous croyons que chaque propriété est unique et mérite une stratégie de vente personnalisée. De l'évaluation précise à la signature finale, nous gérons chaque détail avec transparence et professionnalisme.</p>                            
+                            <div style="margin-top: 35px; padding-top: 35px; border-top: 2px solid #e0e0e0;">
+                                <h3 style="font-size: 20px; font-weight: 700; color: var(--color-primary-blue); margin-bottom: 25px; margin-top: 0; text-align: center;">Propriétés actuellement en vente</h3>
+                                
+                                <div style="margin-bottom: 20px; background: linear-gradient(135deg, #f0fdf4 0%, #f7ffe4 100%); border-left: 4px solid #22c55e; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.1);">
+                                    <img src="../images/dejavueHome1.jpg" alt="Villa de prestige à Lausanne" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #22c55e, #4ade80); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">VENTE</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Villa de prestige à Lausanne</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">Propriété exceptionnelle avec vue sur le lac, 4 chambres, jardin paysagé.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="margin-bottom: 20px; background: linear-gradient(135deg, #f0fdf4 0%, #f7ffe4 100%); border-left: 4px solid #22c55e; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.1);">
+                                    <img src="../images/dejavueHome2.jpg" alt="Maison en brique à Montreux" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #22c55e, #4ade80); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">VENTE</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Maison en brique à Montreux</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">Charme authentique, rénovée, 3 chambres, proche du centre-ville.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="margin-bottom: 28px; background: linear-gradient(135deg, #f0fdf4 0%, #f7ffe4 100%); border-left: 4px solid #22c55e; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.1);">
+                                    <img src="../images/dejavueHome3.jpg" alt="Penthouse moderne à Genève" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #22c55e, #4ade80); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">VENTE</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Penthouse moderne à Genève</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">Design contemporain, 5 chambres, terrasse panoramique, parking sécurisé.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="text-align: center; margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #f0fdf4 0%, #f7ffe4 100%); border-radius: 12px; border: 1px solid #dcfce7;">
+                                    <p style="margin: 0 0 18px 0; font-size: 15px; color: #333; font-weight: 600;">Pour plus d'informations et détails complets</p>
+                                    <a href="https://wa.me/41799387985?text=Bonjour,%20je%20suis%20intéressé%20par%20les%20propriétés%20à%20vendre%20présentées" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 14px 28px; border-radius: 28px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);" onmouseover="this.style.boxShadow='0 6px 20px rgba(34, 197, 94, 0.4)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 4px 15px rgba(34, 197, 94, 0.3)'; this.style.transform='translateY(0)';">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.773 1.149c-1.474.787-2.792 1.886-3.822 3.133-2.182 2.629-3.366 6.108-2.992 9.564.072.662.632 1.157 1.313 1.157.04 0 .082 0 .124-.003 1.001-.096 1.82-.898 1.74-1.917-.481-5.596.626-10.429 3.155-13.766.982-1.325 2.19-2.433 3.57-3.24 1.382-.807 2.94-1.25 4.546-1.25.048 0 .096 0 .144.001 1.052.069 1.909-.808 1.864-1.865-.049-1.06-.888-1.908-1.94-1.92z"/>
+                                        </svg>
+                                        <span>Contacter sur WhatsApp</span>
+                                    </a>
+                                </div>
+                            </div>                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Location -->
+            <div id="modal-location" class="service-modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close">&times;</button>
+                    <div class="modal-body">
+                        <h2>Location</h2>
+                        <div class="modal-scroll">
+                            <p>Trouvez votre résidence idéale à court ou long terme</p>
+                            
+                            <p>Notre portefeuille de locations inclut des appartements et maisons meublés de luxe dans les meilleures adresses de Suisse et d'Europe. Qu'il s'agisse d'une location temporaire ou d'une installation long terme, nous avons la propriété parfaite pour vous.</p>
+                            
+                            <p>Chacune de nos résidences est soigneusement sélectionnée et entretenue selon les plus hauts standards. Nous offrons une flexibilité maximale avec des baux adaptés à vos besoins et une gestion transparente.</p>
+                            
+                            <div style="margin-top: 35px; padding-top: 35px; border-top: 2px solid #e0e0e0;">
+                                <h3 style="font-size: 20px; font-weight: 700; color: var(--color-primary-blue); margin-bottom: 25px; margin-top: 0; text-align: center;">Propriétés actuellement en location</h3>
+                                
+                                <div style="margin-bottom: 20px; background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%); border-left: 4px solid #3b82f6; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);">
+                                    <img src="../images/dejavueHome1.jpg" alt="Appartement luxe à Genève" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">LOCATION</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Appartement Luxe à Genève</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">2 chambres, vue panoramique, entièrement meublé, accès fitness.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="margin-bottom: 28px; background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%); border-left: 4px solid #3b82f6; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);">
+                                    <img src="../images/dejavueHome2.jpg" alt="Villa meublée à Lausanne" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">LOCATION</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Villa Meublée à Lausanne</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">4 chambres, jardin privé, cuisine équipée, parking inclus.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="text-align: center; margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%); border-radius: 12px; border: 1px solid #dbeafe;">
+                                    <p style="margin: 0 0 18px 0; font-size: 15px; color: #333; font-weight: 600;">Intéressé par l'une de nos propriétés ?</p>
+                                    <a href="https://wa.me/41799387985?text=Bonjour,%20je%20suis%20intéressé%20par%20les%20propriétés%20à%20louer%20présentées" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 14px 28px; border-radius: 28px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);" onmouseover="this.style.boxShadow='0 6px 20px rgba(34, 197, 94, 0.4)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 4px 15px rgba(34, 197, 94, 0.3)'; this.style.transform='translateY(0)';">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.773 1.149c-1.474.787-2.792 1.886-3.822 3.133-2.182 2.629-3.366 6.108-2.992 9.564.072.662.632 1.157 1.313 1.157.04 0 .082 0 .124-.003 1.001-.096 1.82-.898 1.74-1.917-.481-5.596.626-10.429 3.155-13.766.982-1.325 2.19-2.433 3.57-3.24 1.382-.807 2.94-1.25 4.546-1.25.048 0 .096 0 .144.001 1.052.069 1.909-.808 1.864-1.865-.049-1.06-.888-1.908-1.94-1.92z"/>
+                                        </svg>
+                                        <span>Contacter sur WhatsApp</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Relocation -->
+            <div id="modal-relocation" class="service-modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close">&times;</button>
+                    <div class="modal-body">
+                        <h2>Relocation</h2>
+                        <div class="modal-scroll">
+                            <p>Vous venez de poser vos valises en Suisse ?</p>
+                            
+                            <p>L'équipe de relocation de « Déjà Vu Home » vous propose une gamme de logements et de studios incroyablement modernes et confortables, entièrement meublés et équipés pour de longs et courts séjours.</p>
+                            
+                            <p>Vous pouvez profiter d'un espace de vie à la fois privé et professionnel avec tous les équipements à disposition. Nous cherchons à répondre parfaitement à vos attentes et à celles de votre famille.</p>
+                            
+                            <div style="margin-top: 35px; padding-top: 35px; border-top: 2px solid #e0e0e0;">
+                                <h3 style="font-size: 20px; font-weight: 700; color: var(--color-primary-blue); margin-bottom: 25px; margin-top: 0; text-align: center;">Studios & Logements Disponibles</h3>
+                                
+                                <div style="margin-bottom: 20px; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-left: 4px solid #f59e0b; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);">
+                                    <img src="../images/dejavueHome1.jpg" alt="Studio moderne Genève" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #f59e0b, #fbbf24); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">RELOCATION</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Studio Moderne à Genève</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">Studio entièrement meublé, WiFi, services inclus, location flexible.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="margin-bottom: 28px; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-left: 4px solid #f59e0b; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);">
+                                    <img src="../images/dejavueHome3.jpg" alt="Logement spacieux Zurich" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #f59e0b, #fbbf24); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">RELOCATION</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Logement Spacieux à Zurich</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">2 chambres, cuisine équipée, services conciergerie 24/7.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="text-align: center; margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-radius: 12px; border: 1px solid #fde68a;">
+                                    <p style="margin: 0 0 18px 0; font-size: 15px; color: #333; font-weight: 600;">Besoin d'aide pour votre relocation ?</p>
+                                    <a href="https://wa.me/41799387985?text=Bonjour,%20j'ai%20besoin%20d'aide%20pour%20ma%20relocation%20en%20Suisse" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 14px 28px; border-radius: 28px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);" onmouseover="this.style.boxShadow='0 6px 20px rgba(34, 197, 94, 0.4)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 4px 15px rgba(34, 197, 94, 0.3)'; this.style.transform='translateY(0)';">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.773 1.149c-1.474.787-2.792 1.886-3.822 3.133-2.182 2.629-3.366 6.108-2.992 9.564.072.662.632 1.157 1.313 1.157.04 0 .082 0 .124-.003 1.001-.096 1.82-.898 1.74-1.917-.481-5.596.626-10.429 3.155-13.766.982-1.325 2.19-2.433 3.57-3.24 1.382-.807 2.94-1.25 4.546-1.25.048 0 .096 0 .144.001 1.052.069 1.909-.808 1.864-1.865-.049-1.06-.888-1.908-1.94-1.92z"/>
+                                        </svg>
+                                        <span>Contacter sur WhatsApp</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Maison -->
+            <div id="modal-maison" class="service-modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close">&times;</button>
+                    <div class="modal-body">
+                        <h2>Maison</h2>
+                        <div class="modal-scroll">
+                            <img src="../images/dejavueHome1.jpg" alt="Collections Maison" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; display: block;">
+                            
+                            <p>Un service global et personnalisé pour transformer votre intérieur en un havre de paix et d'élégance. Déjà Vu Home sélectionne avec soin les plus belles collections de linges de maison, literies et vaisselle haut de gamme.</p>
+                            
+                            <p style="font-weight: 600; color: var(--color-primary-blue);">Matières Premières d'Exception</p>
+                            <p>Coton égyptien, lin français, draps en pur coton biologique. Tous nos produits sont fabriqués dans le respect de l'environnement et des normes de qualité suisse et européenne les plus strictes.</p>
+                            
+                            <p style="font-weight: 600; color: var(--color-primary-blue);">Vaisselle & Collections</p>
+                            <p>Porcelaine fine, cristaux de prestige, services complets de designers internationaux renommés. Des pièces intemporelles qui ajoutent du raffinement à votre table.</p>
+                            
+                            <div style="margin-top: 35px; padding-top: 35px; border-top: 2px solid #e0e0e0;">
+                                <h3 style="font-size: 20px; font-weight: 700; color: var(--color-primary-blue); margin-bottom: 25px; margin-top: 0; text-align: center;">Nos Collections Maison</h3>
+                                
+                                <div style="margin-bottom: 20px; background: linear-gradient(135deg, #fff5f7 0%, #fff9fb 100%); border-left: 4px solid #ec4899; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);">
+                                    <img src="../images/dejavueHome1.jpg" alt="Linges Premium" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #ec4899, #f472b6); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">LUXE</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Linges de Maison Premium</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">Coton égyptien, lin français, collections exclusives suisse et européenne.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="margin-bottom: 28px; background: linear-gradient(135deg, #fff5f7 0%, #fff9fb 100%); border-left: 4px solid #ec4899; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.1);">
+                                    <img src="../images/dejavueHome3.jpg" alt="Vaisselle Haut de Gamme" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #ec4899, #f472b6); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">LUXE</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Vaisselle Haut de Gamme</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">Porcelaine fine, cristaux, services complets de designers prestigieux.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="text-align: center; margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #fcebe0 0%, #fff9f5 100%); border-radius: 12px; border: 1px solid #fde0d9;">
+                                    <p style="margin: 0 0 18px 0; font-size: 15px; color: #333; font-weight: 600;">Découvrez notre sélection exclusive</p>
+                                    <a href="https://wa.me/41799387985?text=Bonjour,%20je%20souhaite%20en%20savoir%20plus%20sur%20vos%20collections%20maison" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 14px 28px; border-radius: 28px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);" onmouseover="this.style.boxShadow='0 6px 20px rgba(34, 197, 94, 0.4)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 4px 15px rgba(34, 197, 94, 0.3)'; this.style.transform='translateY(0)';">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.773 1.149c-1.474.787-2.792 1.886-3.822 3.133-2.182 2.629-3.366 6.108-2.992 9.564.072.662.632 1.157 1.313 1.157.04 0 .082 0 .124-.003 1.001-.096 1.82-.898 1.74-1.917-.481-5.596.626-10.429 3.155-13.766.982-1.325 2.19-2.433 3.57-3.24 1.382-.807 2.94-1.25 4.546-1.25.048 0 .096 0 .144.001 1.052.069 1.909-.808 1.864-1.865-.049-1.06-.888-1.908-1.94-1.92z"/>
+                                        </svg>
+                                        <span>Contacter sur WhatsApp</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Ameublement -->
+            <div id="modal-ameublement" class="service-modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <button class="modal-close">&times;</button>
+                    <div class="modal-body">
+                        <h2>Ameublement</h2>
+                        <div class="modal-scroll">
+                            <img src="../images/dejavueHome2.jpg" alt="Services Ameublement" style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; display: block;">
+                            
+                            <p>Déjà Vu Home vous propose des services complets d'aménagement et de design d'intérieurs, pilotés par des experts passionnés en décoration et architecture intérieure.</p>
+                            
+                            <p style="font-weight: 600; color: var(--color-primary-blue);">Votre Projet Personnalisé</p>
+                            <p>Du conseil en aménagement d'espaces privés et professionnels à la réalisation complète de votre projet. Notre équipe étudie vos envies et besoins pour créer un intérieur qui vous ressemble.</p>
+                            
+                            <p style="font-weight: 600; color: var(--color-primary-blue);">Mobilier Design & Écologique</p>
+                            <p>Sélection exclusive de meubles intemporels, confortables et ergonomiques, issus de créateurs et designers internationaux renommés. Tous nos produits respectent l'environnement et les normes de durabilité.</p>
+                            
+                            <p style="font-weight: 600; color: var(--color-primary-blue);">Transformation & Innovation</p>
+                            <p>Nos conseillers expérimentés réaménagent et transforment votre intérieur avec créativité et professionnalisme, en intégrant harmonie et modernité à votre décor.</p>
+                            
+                            <div style="margin-top: 35px; padding-top: 35px; border-top: 2px solid #e0e0e0;">
+                                <h3 style="font-size: 20px; font-weight: 700; color: var(--color-primary-blue); margin-bottom: 25px; margin-top: 0; text-align: center;">Nos Services d'Aménagement</h3>
+                                
+                                <div style="margin-bottom: 20px; background: linear-gradient(135deg, #f3f0ff 0%, #faf8ff 100%); border-left: 4px solid #8b5cf6; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);">
+                                    <img src="../images/dejavueHome2.jpg" alt="Conseil en Aménagement" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #8b5cf6, #a78bfa); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">SERVICE</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Conseil en Aménagement</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">Espaces privés et professionnels avec des designers expérimentés.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="margin-bottom: 28px; background: linear-gradient(135deg, #f3f0ff 0%, #faf8ff 100%); border-left: 4px solid #8b5cf6; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);">
+                                    <img src="../images/Zurich.avif" alt="Mobilier Design Écologique" style="width: 100%; height: 140px; object-fit: cover; display: block;">
+                                    <div style="padding: 20px;">
+                                        <span style="display: inline-block; background: linear-gradient(135deg, #8b5cf6, #a78bfa); color: white; padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.5px;">SERVICE</span>
+                                        <h4 style="margin: 12px 0 8px 0; font-size: 17px; font-weight: 700; color: #333;">Mobilier Design Écologique</h4>
+                                        <p style="margin: 0; font-size: 14px; color: #555; line-height: 1.6;">Sélection de créateurs internationaux, matériaux durables et innovants.</p>
+                                    </div>
+                                </div>
+                                
+                                <div style="text-align: center; margin-top: 30px; padding: 25px; background: linear-gradient(135deg, #f0f9ff 0%, #f8fcff 100%); border-radius: 12px; border: 1px solid #dbeafe;">
+                                    <p style="margin: 0 0 18px 0; font-size: 15px; color: #333; font-weight: 600;">Transformez votre intérieur avec nous</p>
+                                    <a href="https://wa.me/41799387985?text=Bonjour,%20j'aimerais%20une%20consultation%20pour%20l'aménagement%20de%20mon%20intérieur" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 14px 28px; border-radius: 28px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);" onmouseover="this.style.boxShadow='0 6px 20px rgba(34, 197, 94, 0.4)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 4px 15px rgba(34, 197, 94, 0.3)'; this.style.transform='translateY(0)';">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="width: 18px; height: 18px;">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.773 1.149c-1.474.787-2.792 1.886-3.822 3.133-2.182 2.629-3.366 6.108-2.992 9.564.072.662.632 1.157 1.313 1.157.04 0 .082 0 .124-.003 1.001-.096 1.82-.898 1.74-1.917-.481-5.596.626-10.429 3.155-13.766.982-1.325 2.19-2.433 3.57-3.24 1.382-.807 2.94-1.25 4.546-1.25.048 0 .096 0 .144.001 1.052.069 1.909-.808 1.864-1.865-.049-1.06-.888-1.908-1.94-1.92z"/>
+                                        </svg>
+                                        <span>Contacter sur WhatsApp</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -333,3 +682,4 @@
     <script src="../js/main.js"></script>
 </body>
 </html>
+

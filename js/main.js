@@ -559,6 +559,71 @@
 
     window.addEventListener('resize', handleResize);
 
+    // === GESTION DES MODALS POUR LES SERVICES ===
+    
+    // Sélectionner tous les boutons "Voir Plus"
+    const modalButtons = document.querySelectorAll('.btn-voir-plus');
+    const modals = document.querySelectorAll('.service-modal');
+    const modalCloses = document.querySelectorAll('.modal-close');
+    const modalOverlays = document.querySelectorAll('.modal-overlay');
+
+    // Fonction pour ouvrir un modal
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Empêcher le scroll
+        }
+    }
+
+    // Fonction pour fermer un modal
+    function closeModal(modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restaurer le scroll
+    }
+
+    // Ouvrir modal au clic sur "Voir Plus"
+    modalButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.stopPropagation(); // Empêcher la propagation
+            const modalId = button.getAttribute('data-modal');
+            openModal(modalId);
+        });
+    });
+
+    // Fermer modal au clic sur le bouton close
+    modalCloses.forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            const modal = closeBtn.closest('.service-modal');
+            closeModal(modal);
+        });
+    });
+
+    // Fermer modal au clic sur l'overlay
+    modalOverlays.forEach(overlay => {
+        overlay.addEventListener('click', () => {
+            const modal = overlay.closest('.service-modal');
+            closeModal(modal);
+        });
+    });
+
+    // Fermer modal avec la touche Échap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const activeModal = document.querySelector('.service-modal.active');
+            if (activeModal) {
+                closeModal(activeModal);
+            }
+        }
+    });
+
+    // Empêcher la fermeture au clic sur le contenu du modal
+    document.querySelectorAll('.modal-content').forEach(content => {
+        content.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    });
+
     // === SERVICE WORKER (for PWA) ===
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

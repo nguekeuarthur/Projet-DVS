@@ -1750,6 +1750,455 @@ p strong {
     font-size: 14px;
 }
 
+/* === OTHER SERVICES SECTION === */
+.content-section-detailed {
+    padding: 40px 0;
+    scroll-margin-top: 20px;
+}
+
+.title-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.title-circle {
+    display: none; /* Masquer le cercle pour tous les titres */
+}
+
+.content-section-detailed h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--color-primary-blue);
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.content-section-detailed h2::after {
+    display: block;
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary-blue) 0%, transparent 100%);
+    margin: var(--spacing-md) auto 0;
+    border-radius: 2px;
+}
+
+.services-cards-section {
+    padding: 80px 0;
+}
+
+.services-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    gap: 60px 40px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+/* === SERVICE CARD === */
+.service-card {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #1a036d 0%, #2d4373 100%);
+    opacity: 1;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover::before {
+    opacity: 0.9;
+}
+
+.service-card-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 30px;
+}
+
+.service-card h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-align: center;
+    transition: all 0.4s ease;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* === SERVICE CARD OVERLAY === */
+.service-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 3, 102, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 3;
+}
+
+.service-card:hover .service-card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:hover h3 {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.service-summary {
+    color: white !important;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.1s;
+}
+
+.service-card:hover .service-summary {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === VOIR PLUS BUTTON === */
+.btn-voir-plus {
+    background: white;
+    color: #667eea;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.service-card:hover .btn-voir-plus {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition-delay: 0.2s;
+}
+
+.btn-voir-plus:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn-voir-plus:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* === MODAL STYLES === */
+.service-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.service-modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    border-radius: 24px;
+    max-width: 650px;
+    width: 100%;
+    max-height: 80vh;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    aspect-ratio: 0.75;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    color: #333;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 45px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.modal-body h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-primary-blue);
+    margin: 0 0 20px 0;
+    text-align: left;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.modal-body h2::after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary-blue) 0%, transparent 100%);
+    border-radius: 2px;
+}
+
+.modal-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 15px;
+    margin-right: -5px;
+}
+
+.modal-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+    background: var(--color-primary-blue);
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-blue);
+    opacity: 0.8;
+}
+
+.modal-body p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: #555;
+    margin-bottom: 18px;
+    font-weight: 400;
+}
+
+.modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Animation d'entrée pour les cards */
+.service-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === SERVICE MODAL === */
+.service-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn var(--transition-speed) ease;
+}
+
+.service-modal.active {
+    display: flex;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    animation: fadeIn var(--transition-speed) ease;
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1001;
+    background: var(--color-white);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-xl);
+    animation: slideUp var(--transition-speed-slow) cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f0f0f0;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-gray);
+    transition: all var(--transition-speed) ease;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.modal-close:hover {
+    background: #e0e0e0;
+    color: var(--color-dark);
+}
+
+.modal-title {
+    font-size: 32px;
+    color: var(--color-primary-blue);
+    margin-bottom: 24px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.modal-text p {
+    color: var(--color-dark);
+    line-height: 1.8;
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+.modal-text p:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* === SERVICES === */
 .love-section {
     text-align: center;
@@ -3789,38 +4238,67 @@ p strong {
     margin-top: var(--spacing-lg);
 }
 
-.service-card {
-    background: var(--color-white);
-    border: 1px solid var(--color-light-gray);
+.services-grid-2col .service-card {
+    height: auto;
+    background: linear-gradient(135deg, #f0f4ff 0%, #f9fbff 100%);
+    border: 1px solid rgba(59, 89, 152, 0.15);
     padding: var(--spacing-lg);
-    border-radius: 4px;
+    border-radius: 8px;
     text-align: center;
     transition: all 0.3s ease;
+    overflow: visible;
+    position: static;
 }
 
-.service-card:hover {
+.services-grid-2col .service-card::before {
+    display: none;
+}
+
+.services-grid-2col .service-card:hover {
     border-color: var(--color-primary-blue);
-    box-shadow: 0 4px 12px rgba(59, 89, 152, 0.12);
+    box-shadow: 0 8px 24px rgba(59, 89, 152, 0.15);
+    transform: translateY(-6px);
 }
 
-.service-icon {
-    font-size: 40px;
+.services-grid-2col .service-icon {
+    font-size: 48px;
     margin-bottom: var(--spacing-md);
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    transition: transform 0.3s ease;
+    color: var(--color-primary-blue);
 }
 
-.service-card h4 {
+.services-grid-2col .service-icon svg {
+    width: 48px;
+    height: 48px;
+    stroke: currentColor;
+    flex-shrink: 0;
+}
+
+.services-grid-2col .service-card:hover .service-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.services-grid-2col .service-card h4 {
     color: var(--color-dark);
-    font-weight: 600;
-    margin-bottom: var(--spacing-sm);
-    font-size: var(--font-size-large);
+    font-weight: 700;
+    margin: var(--spacing-sm) 0;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-.service-card p {
+.services-grid-2col .service-card:hover h4 {
+    color: var(--color-primary-blue);
+}
+
+.services-grid-2col .service-card p {
     color: var(--color-gray);
     margin: 0;
-    line-height: var(--line-height-normal);
-    font-size: var(--font-size-small);
+    line-height: 1.6;
+    font-size: 14px;
 }
 
 /* Euronews Section */
@@ -4008,6 +4486,79 @@ p strong {
 
     .section-subtitle {
         font-size: var(--font-size-base);
+    }
+
+    /* Other Services Mobile Styles */
+    .services-cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px 20px;
+    }
+
+    .service-card {
+        height: 240px;
+    }
+
+    .service-card h3 {
+        font-size: 26px;
+    }
+
+    .service-summary {
+        font-size: 14px;
+    }
+
+    .modal-body {
+        padding: 40px 25px 30px;
+    }
+
+    .modal-body h2 {
+        font-size: 28px;
+    }
+
+    .modal-scroll {
+        max-height: calc(85vh - 120px);
+        padding-right: 10px;
+    }
+
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+
+    .service-card h3 {
+        padding: var(--spacing-sm);
+        font-size: 18px;
+    }
+
+    .service-overlay {
+        padding: var(--spacing-md);
+    }
+
+    .service-overlay p {
+        font-size: 12px;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .see-more-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    /* Modal Mobile Styles */
+    .modal-content {
+        padding: var(--spacing-lg);
+        width: 95%;
+    }
+
+    .modal-title {
+        font-size: var(--font-size-h3);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .modal-text p {
+        font-size: 13px;
     }
 }
 
