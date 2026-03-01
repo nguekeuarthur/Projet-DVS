@@ -27,8 +27,18 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="lang-switcher">FR ▼</button>
-                <button class="mobile-menu-toggle" aria-label="Menu">
+                <div class="lang-switcher-wrapper">
+                    <button type="button" class="lang-switcher-btn" id="langSwitcherBtn" aria-expanded="false" aria-haspopup="true" title="Changer de langue">
+                        <span id="langCurrent">FR</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <ul class="lang-dropdown" id="langDropdown">
+                        <li class="lang-option active" data-lang="fr">🇫🇷 Français</li>
+                        <li class="lang-option" data-lang="en">🇬🇧 English</li>
+                        <li class="lang-option" data-lang="de">🇩🇪 Deutsch</li>
+                    </ul>
+                </div>
+                <button type="button" class="mobile-menu-toggle" aria-label="Menu" title="Menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -680,6 +690,7 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/i18n.js"></script>
 </body>
 </html>
 

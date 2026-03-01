@@ -7,7 +7,7 @@
     <meta name="description"
         content="Déjà Vu - Groupe d'experts en performances actifs, immobilier, objets de collection et services de conciergerie">
     <title>Déjà Vu - Vous pensiez l'avoir vu</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
@@ -24,22 +24,32 @@
             <nav class="main-nav">
                 <ul>
                     <!-- <li><a href="#qui-sommes-nous">Qui sommes-nous?</a></li> -->
-                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="equipe.html" data-i18n="nav.equipe">Équipe</a></li>
                     <li class="dropdown">
-                        <a href="#services" class="dropdown-toggle">Services <span class="dropdown-arrow">▼</span></a>
+                        <a href="#services" class="dropdown-toggle"><span data-i18n="nav.services">Services</span> <span class="dropdown-arrow">▼</span></a>
                         <ul class="dropdown-menu">
                             <li><a href="home/home.html">Déjà Vu Home</a></li>
                             <li><a href="services/services.html">Déjà Vu Services</a></li>
                             <li><a href="collection/collection.html">Déjà Vu Collection</a></li>
                         </ul>
                     </li>
-                    <li><a href="index.html#tete-a-tete">Tête-à-tête</a></li>
-                    <li><a href="innocence-en-danger.html">Association</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html#tete-a-tete" data-i18n="nav.tete">Tête-à-tête</a></li>
+                    <li><a href="innocence-en-danger.html" data-i18n="nav.association">Association</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="lang-switcher">FR ▼</button>
+                <div class="lang-switcher-wrapper">
+                    <button class="lang-switcher-btn" id="langSwitcherBtn" aria-expanded="false" aria-haspopup="true">
+                        <span id="langCurrent">FR</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <ul class="lang-dropdown" id="langDropdown">
+                        <li class="lang-option active" data-lang="fr">🇫🇷 Français</li>
+                        <li class="lang-option" data-lang="en">🇬🇧 English</li>
+                        <li class="lang-option" data-lang="de">🇩🇪 Deutsch</li>
+                    </ul>
+                </div>
                 <button class="mobile-menu-toggle" aria-label="Menu">
                     <span></span>
                     <span></span>
@@ -71,10 +81,9 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-description">
-                <p><strong>Votre groupe d'experts</strong> et de <strong>performers actifs</strong> dans l'immobilier,
-                </p>
-                <p>la vente d'objets rares, les dons & services de conciergerie qui réinvente</p>
-                <p>l'approche, la valorisation, préserve et responsabilise ses générés de vente avec succès</p>
+                <p data-i18n-html="index.hero1"><strong>Votre groupe d'experts</strong> et de <strong>performers actifs</strong> dans l'immobilier,</p>
+                <p data-i18n="index.hero2">la vente d'objets rares, les dons & services de conciergerie qui réinvente</p>
+                <p data-i18n="index.hero3">l'approche, la valorisation, préserve et responsabilise ses générés de vente avec succès</p>
             </div>
         </div>
         <div class="hero-slider-dots">
@@ -98,11 +107,11 @@
                                 <div class="card-icon blue">
                                     <img src="images/Déjà vu Home.png" alt="Déjà Vu Home" class="card-logo">
                                 </div>
-                                <h3>Découvrez notre<br>performance dans<br>l'immobilier</h3>
+                                <h3 data-i18n-html="index.card_home_title">Découvrez notre<br>performance dans<br>l'immobilier</h3>
                             </div>
                             <div class="flip-card-back blue-back">
-                                <p>Nous vous offrons nos services d'experts dans l'immobilier de prestige, la recherche de biens exclusifs et l'assistance pour tous vos besoins immobiliers.</p>
-                                <a href="home/home.html" class="btn-outline-white">HOME</a>
+                                <p data-i18n="index.card_home_desc">Nous vous offrons nos services d'experts dans l'immobilier de prestige, la recherche de biens exclusifs et l'assistance pour tous vos besoins immobiliers.</p>
+                                <a href="home/home.html" class="btn-outline-white" data-i18n="index.card_home_btn">HOME</a>
                             </div>
                         </div>
                     </div>
@@ -116,11 +125,11 @@
                                 <div class="card-icon red">
                                     <img src="images/Déjà vu Services.png" alt="Déjà Vu Services" class="card-logo">
                                 </div>
-                                <h3>Faites appel à des services de<br>conciergerie sur mesure</h3>
+                                <h3 data-i18n-html="index.card_services_title">Faites appel à des services de<br>conciergerie sur mesure</h3>
                             </div>
                             <div class="flip-card-back red-back">
-                                <p>Services de conciergerie privée d'exception pour tous vos besoins : voyages, événements, gastronomie, famille et bien plus.</p>
-                                <a href="services/services.html" class="btn-outline-white">SERVICES</a>
+                                <p data-i18n="index.card_services_desc">Services de conciergerie privée d'exception pour tous vos besoins : voyages, événements, gastronomie, famille et bien plus.</p>
+                                <a href="services/services.html" class="btn-outline-white" data-i18n="index.card_services_btn">SERVICES</a>
                             </div>
                         </div>
                     </div>
@@ -134,11 +143,11 @@
                                 <div class="card-icon orange">
                                     <img src="images/Déjà vu Collection.png" alt="Déjà Vu Collection" class="card-logo">
                                 </div>
-                                <h3>Découvrez nos<br>magnifiques<br>objets d'art</h3>
+                                <h3 data-i18n-html="index.card_collection_title">Découvrez nos<br>magnifiques<br>objets d'art</h3>
                             </div>
                             <div class="flip-card-back orange-back">
-                                <p>Découvrez notre sélection d'objets rares, de montres de prestige et d'œuvres d'art soigneusement sélectionnées pour les collectionneurs avertis.</p>
-                                <a href="collection.html" class="btn-outline-white">COLLECTION</a>
+                                <p data-i18n="index.card_collection_desc">Découvrez notre sélection d'objets rares, de montres de prestige et d'œuvres d'art soigneusement sélectionnées pour les collectionneurs avertis.</p>
+                                <a href="collection.html" class="btn-outline-white" data-i18n="index.card_collection_btn">COLLECTION</a>
                             </div>
                         </div>
                     </div>
@@ -154,10 +163,10 @@
             <div class="about-block enterprise-block">
                 <div class="about-bg-circle right"></div>
                 <div class="about-content text-right">
-                    <h2 class="section-title">ENTREPRISE</h2>
+                    <h2 class="section-title" data-i18n="index.about_enterprise">ENTREPRISE</h2>
                     <div class="about-description">
-                        <p>Déjà Vu Switzerland est un groupe d'experts actifs dans l'immobilier, le service de conciergerie et la recherche d'objets rares. Nous prenons en charge toutes vos demandes, de la recherche d'une école pour vos enfants à l'organisation de votre voyage d'affaires en jet privé.</p>
-                        <p>Malika C. David et son équipe s'adaptent à tous les univers et cultures, vous faisant bénéficier d'ouvertures extraordinaires. Confidentialité, excellence et sensibilité sont nos valeurs cardinales.</p>
+                        <p data-i18n="index.about_p1">Déjà Vu Switzerland est un groupe d'experts actifs dans l'immobilier, le service de conciergerie et la recherche d'objets rares. Nous prenons en charge toutes vos demandes, de la recherche d'une école pour vos enfants à l'organisation de votre voyage d'affaires en jet privé.</p>
+                        <p data-i18n="index.about_p2">Malika C. David et son équipe s'adaptent à tous les univers et cultures, vous faisant bénéficier d'ouvertures extraordinaires. Confidentialité, excellence et sensibilité sont nos valeurs cardinales.</p>
                     </div>
                 </div>
             </div>
@@ -176,13 +185,13 @@
             <div class="about-block environment-block">
                 <div class="about-bg-circle left"></div>
                 <div class="about-content text-left">
-                    <h2 class="section-title">L'ENVIRONNEMENT À COEUR</h2>
+                    <h2 class="section-title" data-i18n="index.env_title">L'ENVIRONNEMENT À COEUR</h2>
                     <div class="about-description">
-                        <p>Déjà Vu Switzerland s'engage à préserver la planète selon la norme ISO 14 001. Nos actions :</p>
+                        <p data-i18n="index.env_p">Déjà Vu Switzerland s'engage à préserver la planète selon la norme ISO 14 001. Nos actions :</p>
                         <ul class="environment-list">
-                            <li>Utilisation rationnelle des ressources et préservation de la nature</li>
-                            <li>Réduction de l'empreinte carbone et gestion responsable des déchets</li>
-                            <li>Transparence et amélioration continue de notre performance environnementale</li>
+                            <li data-i18n="index.env_li1">Utilisation rationnelle des ressources et préservation de la nature</li>
+                            <li data-i18n="index.env_li2">Réduction de l'empreinte carbone et gestion responsable des déchets</li>
+                            <li data-i18n="index.env_li3">Transparence et amélioration continue de notre performance environnementale</li>
                         </ul>
                     </div>
                 </div>
@@ -194,11 +203,10 @@
     <section id="tete-a-tete" class="teteatete-section">
         <div class="container">
             <div class="teteatete-header">
-                <h2 class="section-title">TÊTE-À-TÊTE</h2>
+                <h2 class="section-title" data-i18n="index.tete_title">TÊTE-À-TÊTE</h2>
                 <p class="teteatete-description">
-                    Découvrez sur cette page tous nos tête-à-tête. Nous interviewons pour vous, des personnalités publiques de la Suisse. 
-                    Retrouvez les extraits de l'interview de Petar Mitrovic sur notre 
-                    <a href="https://www.instagram.com/dejavuswitzerland/?hl=fr" target="_blank" rel="noopener noreferrer" class="instagram-link">compte Instagram</a>.
+                    <span data-i18n="index.tete_desc">Découvrez sur cette page tous nos tête-à-tête. Nous interviewons pour vous, des personnalités publiques de la Suisse. Retrouvez les extraits de l'interview de Petar Mitrovic sur notre</span>
+                    <a href="https://www.instagram.com/dejavuswitzerland/?hl=fr" target="_blank" rel="noopener noreferrer" class="instagram-link" data-i18n="index.tete_ig_link">compte Instagram</a>.
                 </p>
             </div>
             
@@ -210,21 +218,21 @@
                     <img src="images/teteatete2.jpg" alt="Interview - Tête-à-tête" onerror="this.style.display='none'">
                     <div class="profile-overlay-data">
                         <h3>Jérôme Aké Béda</h3>
-                        <p class="profile-overlay-role">Sommelier et Maître d'Hôtel</p>
-                        <p>Sommelier et Maître d'Hôtel chez l'Auberge de l'Onde, Jérôme est aussi un poète du chasselas distingué.</p>
-                        <p>Depuis son arrivée, il a eu la révélation du vin suisse auquel il a consacré trois livres.</p>
-                        <p>Il a été élu Sommelier suisse de l'année par le Gault & Millau en 2015, Commandeur de l'Ordre des Vins vaudois en 2018.</p>
-                        <a href="https://www.instagram.com/dejavuswitzerland/?hl=fr" target="_blank" rel="noopener noreferrer">Découvrir l'interview</a>
+                        <p class="profile-overlay-role" data-i18n="index.jerome_role">Sommelier et Maître d'Hôtel</p>
+                        <p data-i18n="index.jerome_p1">Sommelier et Maître d'Hôtel chez l'Auberge de l'Onde, Jérôme est aussi un poète du chasselas distingué.</p>
+                        <p data-i18n="index.jerome_p2">Depuis son arrivée, il a eu la révélation du vin suisse auquel il a consacré trois livres.</p>
+                        <p data-i18n="index.jerome_p3">Il a été élu Sommelier suisse de l'année par le Gault & Millau en 2015, Commandeur de l'Ordre des Vins vaudois en 2018.</p>
+                        <a href="https://www.instagram.com/dejavuswitzerland/?hl=fr" target="_blank" rel="noopener noreferrer" data-i18n="index.jerome_link">Découvrir l'interview</a>
                     </div>
                 </div>
                 <div class="teteatete-image-wrapper profile-card-overlay">
                     <img src="images/teteatete3.jpg" alt="Interview - Rencontre professionnelle" onerror="this.style.display='none'">
                     <div class="profile-overlay-data">
                         <h3>Petar Mitrovic</h3>
-                        <p class="profile-overlay-role">Photographe Engagé et Humaniste</p>
-                        <p>Découvrez l'histoire émouvante de Petar Mitrovic, un photographe engagé et humaniste (membre de l'USPP – Union Suisse des Photographes Professionnels).</p>
-                        <p>La photographie est un outil puissant que Petar utilise pour passer des messages. Ses travaux lui ont valu la distinction en tant que "Personnalité Suisse-Romande" en 2020.</p>
-                        <a href="https://www.instagram.com/dejavuswitzerland/?hl=fr" target="_blank" rel="noopener noreferrer">Découvrir l'interview</a>
+                        <p class="profile-overlay-role" data-i18n="index.petar_role">Photographe Engagé et Humaniste</p>
+                        <p data-i18n="index.petar_p1">Découvrez l'histoire émouvante de Petar Mitrovic, un photographe engagé et humaniste (membre de l'USPP – Union Suisse des Photographes Professionnels).</p>
+                        <p data-i18n="index.petar_p2">La photographie est un outil puissant que Petar utilise pour passer des messages. Ses travaux lui ont valu la distinction en tant que "Personnalité Suisse-Romande" en 2020.</p>
+                        <a href="https://www.instagram.com/dejavuswitzerland/?hl=fr" target="_blank" rel="noopener noreferrer" data-i18n="index.petar_link">Découvrir l'interview</a>
                     </div>
                 </div>
             </div>
@@ -235,11 +243,10 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Prêt à franchir le pas ?</h2>
-                <p class="cta-description">Notre équipe d'experts est à votre disposition pour vous accompagner dans
-                    tous vos projets</p>
+                <h2 class="cta-title" data-i18n="index.cta_title">Prêt à franchir le pas ?</h2>
+                <p class="cta-description" data-i18n="index.cta_desc">Notre équipe d'experts est à votre disposition pour vous accompagner dans tous vos projets</p>
                 <a href="contact.html" class="btn-cta">
-                    <span>Nous Contacter</span>
+                    <span data-i18n="index.cta_btn">Nous Contacter</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path
                             d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
@@ -257,9 +264,8 @@
                     <div class="logo-circle">
                         <img src="images/Déjà vu Switzerland.png" alt="Déjà Vu" class="footer-logo-img">
                     </div>
-                    <p class="footer-tagline">Votre partenaire d'excellence</p>
-                    <p class="footer-description">Leader suisse en immobilier de prestige, conciergerie privée et
-                        collection d'art depuis 2010</p>
+                    <p class="footer-tagline" data-i18n="footer.tagline">Votre partenaire d'excellence</p>
+                    <p class="footer-description" data-i18n="footer.description">Leader suisse en immobilier de prestige, conciergerie privée et collection d'art depuis 2010</p>
                     <div class="footer-badges">
                         <div class="badge">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -409,6 +415,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 
 </html>
