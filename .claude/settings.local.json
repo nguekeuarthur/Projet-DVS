@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -l \"i18n.js\" \"/c/Users/Arthur Nguekeu/Documents/B2B/DejaVu/David\"/*.html \"/c/Users/Arthur Nguekeu/Documents/B2B/DejaVu/David\"/*/*.html)"
+    ]
+  }
+}
