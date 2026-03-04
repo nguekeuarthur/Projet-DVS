@@ -1,6 +1,6 @@
 // ============================================================================
 // DÉJÀ VU SERVICES - SLIDER LUXE - CORRIGÉ
-// Fichier : script.js (dans dossier services/)
+// Fichier : script.js (à placer dans le dossier services/ ou js/)
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -152,9 +152,8 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('❌ Aucun slide ou dot trouvé !');
     }
     
-    // Le reste de votre code reste inchangé...
     // ============================================================================
-    // 2. MENU MOBILE
+    // 2. MENU MOBILE (corrigé et amélioré)
     // ============================================================================
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('nav');
@@ -175,6 +174,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 spans[1].style.opacity = '1';
                 spans[2].style.transform = 'none';
             }
+        });
+        
+        // Fermer le menu quand on clique sur un lien de navigation (mobile)
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                    const spans = mobileMenuToggle.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
         });
     }
     
@@ -227,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ============================================================================
-    // 5. EFFETS DE HOVER SUR LES CARDS
+    // 5. EFFETS DE HOVER SUR LES CARDS (optionnel, car géré en CSS)
     // ============================================================================
     const serviceCards = document.querySelectorAll('.service-card');
     serviceCards.forEach(card => {
@@ -264,3 +278,93 @@ function forceSliderFilters() {
 
 // Appeler cette fonction si besoin
 setTimeout(forceSliderFilters, 2000);
+
+/* ── MODALE SERVICES ───────────────────────────── */
+(function () {
+
+    const overlay = document.createElement("div");
+    overlay.className = "service-modal-overlay";
+    overlay.innerHTML = `
+        <div class="service-modal" role="dialog" aria-modal="true">
+
+            <!-- Header sticky : titre + croix -->
+            <div class="service-modal-header">
+                <span class="service-modal-eyebrow">Nos services</span>
+                <h3 class="service-modal-title"></h3>
+                <button class="service-modal-close" aria-label="Fermer">✕</button>
+            </div>
+
+            <!-- Corps scrollable -->
+            <div class="service-modal-body">
+                <div class="service-modal-divider">
+                    <div class="service-modal-divider-diamond"></div>
+                </div>
+                <p class="service-modal-text"></p>
+                <div class="service-modal-footer">
+                    <a href="#" class="service-modal-cta"><span>Prendre RDV →</span></a>
+                    <span class="service-modal-badge">Déjà Vu Services</span>
+                </div>
+            </div>
+
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const modalTitle  = overlay.querySelector(".service-modal-title");
+    const modalText   = overlay.querySelector(".service-modal-text");
+    const modalCtaEl  = overlay.querySelector(".service-modal-cta");
+    const modalCtaTxt = overlay.querySelector(".service-modal-cta span");
+    const closeBtn    = overlay.querySelector(".service-modal-close");
+    const modalBody   = overlay.querySelector(".service-modal-body");
+    const modalHeader = overlay.querySelector(".service-modal-header");
+
+    let hoverTimer = null;
+
+    // Ombre sur le header quand on scroll
+    modalBody.addEventListener("scroll", () => {
+        modalHeader.classList.toggle("is-scrolled", modalBody.scrollTop > 0);
+    });
+
+    function openModal(card) {
+        const back = card.querySelector(".service-card-back");
+        if (!back) return;
+
+        modalTitle.textContent  = back.querySelector("h3")?.textContent.trim() || "";
+        modalText.textContent   = back.querySelector("p")?.textContent.trim()  || "";
+        const link = back.querySelector(".service-link");
+        modalCtaEl.href         = link?.href        || "#";
+        modalCtaTxt.textContent = link?.textContent || "Prendre RDV →";
+
+        // Reset scroll a chaque ouverture
+        modalBody.scrollTop = 0;
+        modalHeader.classList.remove("is-scrolled");
+
+        overlay.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+        overlay.classList.remove("is-open");
+        document.body.style.overflow = "";
+        clearTimeout(hoverTimer);
+    }
+
+    // Ouverture apres 750ms (fin animation vague rouge)
+    document.querySelectorAll(".service-card").forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            hoverTimer = setTimeout(() => openModal(card), 750);
+        });
+        card.addEventListener("mouseleave", () => {
+            clearTimeout(hoverTimer);
+        });
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+    overlay.addEventListener("click", e => {
+        if (e.target === overlay) closeModal();
+    });
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape") closeModal();
+    });
+
+})();
