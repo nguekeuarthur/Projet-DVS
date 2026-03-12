@@ -1032,6 +1032,14 @@ p strong {
     transition: all var(--transition-speed) ease;
 }
 
+.card-icon-blue, 
+.card-icon-red, 
+.card-icon-orange {
+    width: 210px;
+    height: 210px; 
+    padding-bottom: 25px;
+}
+
 .flip-container:hover .card-icon {
     transform: scale(1.15) rotate(5deg) translateZ(50px);
     transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
