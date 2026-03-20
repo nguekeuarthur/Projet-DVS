@@ -49,9 +49,9 @@ const DejuVuI18n = (function () {
       "footer.cgu":                 "CGU",
 
       // === PAGE INDEX ===
-      "index.hero1": "<strong>Votre groupe d'experts</strong> et de <strong>performers actifs</strong> dans l'immobilier,",
-      "index.hero2": "la vente d'objets rares, les dons & services de conciergerie qui réinvente",
-      "index.hero3": "l'approche, la valorisation, préserve et responsabilise ses générés de vente avec succès",
+      "index.hero1": "<strong>Votre groupe d'experts</strong> et de <strong>partenaires actifs</strong> dans l'immobilier,",
+      "index.hero2": "la vente d'objets rares, et dans le service de conciergerie sur mesure.",
+      "index.hero3": "Notre approche visionnaire, engagée et responsable est garante de votre succès!",
 
       "index.card_home_title":      "Découvrez notre<br>performance dans<br>l'immobilier",
       "index.card_home_desc":       "Nous vous offrons nos services d'experts dans l'immobilier de prestige, la recherche de biens exclusifs et l'assistance pour tous vos besoins immobiliers.",
@@ -167,9 +167,9 @@ const DejuVuI18n = (function () {
       "footer.privacy":             "Privacy",
       "footer.cgu":                 "Terms",
 
-      "index.hero1": "<strong>Your group of experts</strong> and <strong>active performers</strong> in real estate,",
-      "index.hero2": "the sale of rare objects, donations & concierge services that reinvent",
-      "index.hero3": "the approach, the enhancement, preserving and empowering its sales generation with success",
+      "index.hero1": "<strong>A group of experts</strong> and <strong>active partners</strong> in real estate,",
+      "index.hero2": "the sale of rare objects, and in tailor-made concierge services",
+      "index.hero3": "Our visionary, committed and responsible approach is a guarantee of your success!",
 
       "index.card_home_title":      "Discover our<br>performance in<br>real estate",
       "index.card_home_desc":       "We offer you our expert services in prestige real estate, the search for exclusive properties and assistance for all your real estate needs.",
