@@ -1,0 +1,190 @@
+
+/* === EQUIPE PAGE === */
+.page-team .main-header {
+    background: var(--color-white);
+}
+
+.team-hero {
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+    text-align: center;
+    background: linear-gradient(180deg, rgba(245, 247, 250, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.team-hero .page-title {
+    margin-bottom: var(--spacing-md);
+    font-weight: 300;
+}
+
+.team-hero .lead {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--color-dark-light);
+}
+
+/* Team Content Grid */
+.team-content {
+    padding: var(--spacing-lg) 0 var(--spacing-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    position: relative;
+}
+
+.deco-circle {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(59, 89, 152, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.team-text h2 {
+    text-align: left;
+    margin-bottom: var(--spacing-lg);
+}
+
+.team-text h2::after {
+    margin: var(--spacing-sm) 0 0;
+}
+
+.team-text p {
+    font-size: 18px;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-dark-light);
+}
+
+/* Team Images - Overlapping Effect */
+.team-images {
+    position: relative;
+    height: 600px; /* Adjust based on image sizes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper {
+    position: absolute;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-xl);
+    transition: transform var(--transition-speed-slow) ease;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed-slow) ease;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.img-main {
+    width: 400px;
+    height: 500px;
+    z-index: 2;
+    top: 50px; /* Centered visually */
+    left: 50px;
+}
+
+.img-secondary {
+    width: 320px;
+    height: 400px;
+    z-index: 1;
+    top: 150px; /* Offset down */
+    right: 50px; /* Offset right */
+    opacity: 0.9;
+}
+
+/* Team Details / Expertise */
+.team-details {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-light-gray);
+}
+
+.team-details h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-h3);
+}
+
+.expertise-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.expertise-list li {
+    background: var(--color-white);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    font-weight: var(--font-weight-medium);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.expertise-list li::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary-blue);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.expertise-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .team-images {
+        height: 500px;
+        margin-top: var(--spacing-lg);
+    }
+    
+    .img-main {
+        width: 300px;
+        height: 400px;
+        left: 50%;
+        transform: translateX(-60%); /* Shift slightly left */
+    }
+    
+    .img-secondary {
+        width: 240px;
+        height: 300px;
+        right: 50%;
+        transform: translateX(60%); /* Shift slightly right */
+    }
+    
+    .team-text h2 {
+        text-align: center;
+    }
+    
+    .team-text h2::after {
+        margin: var(--spacing-sm) auto 0;
+    }
+}
