@@ -11,38 +11,8 @@
     const $$ = (selector, context = document) => Array.from(context.querySelectorAll(selector));
 
     // === MOBILE MENU ===
-    const initMobileMenu = () => {
-        const toggle = $('.mobile-menu-toggle');
-        const nav = $('.main-nav ul');
-        
-        if (!toggle || !nav) return;
-        
-        toggle.addEventListener('click', () => {
-            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-            toggle.classList.toggle('active');
-            
-            if (nav.style.display === 'flex') {
-                nav.style.flexDirection = 'column';
-                nav.style.position = 'absolute';
-                nav.style.top = '100%';
-                nav.style.left = '0';
-                nav.style.right = '0';
-                nav.style.background = 'var(--color-dark)';
-                nav.style.padding = '1rem';
-                nav.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
-            }
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-                if (window.innerWidth <= 768) {
-                    nav.style.display = 'none';
-                    toggle.classList.remove('active');
-                }
-            }
-        });
-    };
+    // Handled by responsive.js — do not set inline styles here
+    const initMobileMenu = () => {};
 
     // === SMOOTH SCROLLING ===
     const initSmoothScroll = () => {
@@ -513,6 +483,34 @@
         });
     };
 
+    // === MOBILE FLIP CARDS - TAP TO REVEAL ===
+    const initMobileFlipCards = () => {
+        const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+        $$('.flip-container').forEach(container => {
+            container.addEventListener('click', (e) => {
+                if (!isMobile()) return;
+                // Ne pas bloquer les clics sur les liens
+                if (e.target.closest('a')) return;
+                
+                // Fermer les autres cartes ouvertes
+                $$('.flip-container.mobile-active').forEach(other => {
+                    if (other !== container) other.classList.remove('mobile-active');
+                });
+                
+                container.classList.toggle('mobile-active');
+            });
+        });
+
+        // Fermer au clic en dehors
+        document.addEventListener('click', (e) => {
+            if (!isMobile()) return;
+            if (!e.target.closest('.flip-container')) {
+                $$('.flip-container.mobile-active').forEach(c => c.classList.remove('mobile-active'));
+            }
+        });
+    };
+
     // === INITIALIZE ALL ===
     const init = () => {
         // Core functionality
@@ -529,6 +527,7 @@
         initGalleryLightbox();
         initFormValidation();
         initAccessibility();
+        initMobileFlipCards();
         
         // Analytics
         initAnalytics();
@@ -544,20 +543,7 @@
     }
 
     // === HANDLE RESPONSIVE RESIZE ===
-    const handleResize = debounce(() => {
-        const nav = $('.main-nav ul');
-        if (!nav) return;
-        
-        if (window.innerWidth > 768) {
-            nav.style.display = 'flex';
-            nav.style.position = 'static';
-            nav.style.flexDirection = 'row';
-        } else {
-            nav.style.display = 'none';
-        }
-    }, 250);
-
-    window.addEventListener('resize', handleResize);
+    // Mobile nav is handled entirely by responsive.js & CSS — no inline overrides here
 
     // === GESTION DES MODALS POUR LES SERVICES ===
     

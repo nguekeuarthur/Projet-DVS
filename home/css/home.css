@@ -1825,17 +1825,18 @@ p strong {
 .service-card-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(3, 3, 102, 0.85);
+    background: rgba(11, 10, 106, 0.95);
     backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 20px 25px;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 3;
+    overflow: hidden;
 }
 
 .service-card:hover .service-card-overlay {
@@ -1850,13 +1851,17 @@ p strong {
 
 .service-summary {
     color: white !important;
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.5;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.4s ease 0.1s;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
 }
 
 .service-card:hover .service-summary {
@@ -1868,9 +1873,9 @@ p strong {
 .btn-voir-plus {
     background: white;
     color: #667eea;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    padding: 14px 32px;
+    padding: 12px 28px;
     border-radius: 4px;
     border: none;
     cursor: pointer;
@@ -1878,6 +1883,7 @@ p strong {
     opacity: 0;
     transform: translateY(10px) scale(0.9);
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
 }
 
 .service-card:hover .btn-voir-plus {
@@ -3924,34 +3930,7 @@ p strong {
         height: 50px;
     }
 
-    .main-nav ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--gradient-dark);
-        flex-direction: column;
-        padding: var(--spacing-md);
-        box-shadow: var(--shadow-lg);
-        gap: 0;
-    }
-
-    .main-nav ul.active {
-        display: flex;
-    }
-
-    .main-nav li {
-        width: 100%;
-    }
-
-    .main-nav a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: var(--spacing-md);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
+    /* mobile nav handled by responsive.css sidebar */
 
     .header-actions {
         gap: var(--spacing-sm);
