@@ -20,12 +20,12 @@
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#loisirs">Loisirs</a></li>
-                    <li><a href="#evenementiel">Événementiel</a></li>
-                    <li><a href="#gastronomie">Gastronomie</a></li>
-                    <li><a href="#voyages">Voyages</a></li>
-                    <li><a href="#famille">Famille</a></li>
-                    <li><a href="#professionnel">Professionnel</a></li>
+                    <li><a href="#" data-popup="loisirs">Loisirs</a></li>
+                    <li><a href="#" data-popup="evenementiel">Événementiel</a></li>
+                    <li><a href="#" data-popup="gastronomie">Gastronomie</a></li>
+                    <li><a href="#" data-popup="voyages">Voyages</a></li>
+                    <li><a href="#" data-popup="famille">Famille</a></li>
+                    <li><a href="#" data-popup="professionnel">Professionnel</a></li>
                     <li><a href="/contactservice.html">Contact</a></li>
                 </ul>
             </nav>
@@ -513,5 +513,132 @@ Notre équipe est toujours à l'affût de nouveautés et sera ravie de répondre
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Popups Services -->
+    <div class="service-popup-overlay" id="servicePopupOverlay">
+        <div class="service-popup">
+            <button class="service-popup-close" id="servicePopupClose" aria-label="Fermer">&times;</button>
+            <h2 class="service-popup-title" id="servicePopupTitle"></h2>
+            <div class="service-popup-text" id="servicePopupText"></div>
+            <div class="service-popup-images" id="servicePopupImages"></div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        const popupData = {
+            loisirs: {
+                title: 'Loisirs',
+                text: `<p>Nous vous assistons avec plaisir pour des événements de votre vie privée. Notre équipe s'engage à vous proposer des idées d'activités passionnantes et inédites : organisation d'anniversaires, de soirées à thème, de mariages ou de goûters d'enfants.</p>
+                       <p>Nous sommes présents si vous souhaitez assister à un événement sportif, artistique, culturel ou de bien-être.. avec la réservation de vos billets de concerts, festival, formule 1, théâtre ou exposition.</p>
+                       <p>Nos carnets d'adresses très bien fournis peuvent satisfaire toutes vos envies.</p>`,
+                images: ['images/loisir1.jpg', 'images/loisir2.jpg']
+            },
+            evenementiel: {
+                title: 'Événementiel',
+                text: `<p>Déjà Vu Services propose son assistance à toute personnalité publique désireuse d'organiser un événement (festif, conférence, réunion de travail,…).</p>
+                       <p>Nous proposons aux artistes des lieux d'exposition, avec système d'accrochage de tableaux professionnels et organisation de vernissages (avec promotion, présentation, catering).</p>
+                       <p>Pour que chacun de vos événements soient un succès, nous nous chargeons de vous accompagner dans chaque étape.</p>
+                       <p>Privés ou publics, l'événementiel n'a pas de secret pour nous. Allant d'un simple conseil, nous vous proposons également l'organisation complète de l'événement.</p>`,
+                images: ['images/Events1.jpg', 'images/Events2.jpg']
+            },
+            gastronomie: {
+                title: 'Gastronomie',
+                text: `<p>Déjà Vu Services vous propose une offre qui vous ressemble et qui vous correspond. Nous mettons sur pied des événements culinaires accompagnés de vins et de thés pour connaisseurs.</p>
+                       <p>Nos chefs étoilés élaborent des mets à base de produits frais et de qualité. Ils mettent en avant les produits, les labels, les vins et les producteurs du terroir.</p>
+                       <p>Quelles que soient vos envies ou vos inspirations, nous vous faisons la promesse d'une expérience culinaire inoubliable.</p>
+                       <p>Notre équipe, composée de fins gourmets, se veut réactive en tout temps.</p>`,
+                images: ['images/gastro2.jpg']
+            },
+            voyages: {
+                title: 'Voyages',
+                text: `<p>Envie d'évasion, de dépaysement, de ressourcement en famille ou en solo ?</p>
+                       <p>Nous sommes à même de vous proposer les meilleures destinations et hôtels, que ce soit sur les pistes enneigées des Alpes ou sur une plage de bord de mer dans un pays lointain et exotique.</p>
+                       <p>Organisation de voyages sur mesure en Suisse ou à l'étranger (Asie – Océanie, Afrique, Amérique latine, Régions polaires, Moyen-Orient et Europe). C'est vous qui choisissez le rythme de vos déplacements et le type d'hébergement.</p>
+                       <p>Si vous le souhaitez, vous pouvez bénéficier des services d'un guide qui rendra votre voyage exceptionnel.</p>`,
+                images: ['images/Voyage1.jpg', 'images/voyage2.jpg']
+            },
+            famille: {
+                title: 'Famille',
+                text: `<p>Notre équipe multiculturelle place la famille au cœur de ses réflexions en lui offrant un service all-in-one 360 degrés.</p>
+                       <p>Les parents, les enfants, les grands-parents, les petits membres de la famille – animaux de compagnie – et tous les proches sont considérés dans notre approche qualitative dont la spécificité est le sur mesure. À nos yeux, chaque famille est simplement unique tout comme ses besoins.</p>
+                       <p>Pour ce faire, nous vous proposons toute une gamme de services pour répondre à vos attentes et rendre votre séjour, indépendamment de sa durée, entièrement et pleinement serein.</p>
+                       <ul>
+                       <li>Conseil ou l'assistance en matière de pré- ou post- installation</li>
+                       <li>Aspect immigration selon les directives SEM</li>
+                       <li>Relocation : recherche de logement temporaire et permanent, électroménagers, ameublement et accessoires, œuvres d'art, …</li>
+                       <li>Recherche d'école</li>
+                       <li>Déménagement</li>
+                       <li>Établissement de relations bancaires, d'assurances, de fiscalité</li>
+                       <li>Ouverture d'un compte bancaire</li>
+                       <li>Gestion de patrimoine</li>
+                       <li>Services domestiques (petits travaux, ménage, baby-sitting, organisation de repas, etc…)</li>
+                       <li>Gestion du départ de votre logement</li>
+                       </ul>
+                       <p>Les services susmentionnés reflètent qu'une petite partie de l'ensemble de nos prestations.</p>
+                       <p>D'ailleurs, les célibataires aussi ont le droit à ces services….</p>`,
+                images: ['images/famille1.png', 'images/famille2.jpg']
+            },
+            professionnel: {
+                title: 'Professionnel',
+                text: `<p>Déjà Vu Services est à votre disposition pour tous les événements de votre vie professionnelle. Nous excellons en une multitude de prestations, allant de l'organisation de banquets à celle de voyages d'affaires à l'étranger, en passant par la mise à disposition d'un jet privé.</p>
+                       <p>Nous connaissons des lieux grandioses convenant parfaitement à des banquets ou soirées d'entreprise, mariant le prestige et le bon goût, que ce soit dans une salle de château médiévale, à proximité du lac Léman ou aux Antipodes.</p>
+                       <p>Vous aurez aussi le loisir d'emprunter un moyen de transport écologique et responsable, combinant entre autres, le trajet ferroviaire confortable en 1ère classe, suivi par une voiture limousine électrique avec chauffeur. Selon vos attentes, nous vous accompagnons volontiers durant ces activités.</p>
+                       <p>Notre équipe est toujours à l'affût de nouveautés.</p>
+                       <p>Et n'hésitez pas à nous faire part de toute autre demande. Nous serons toujours ravis de répondre au mieux à vos attentes et desiderata …</p>`,
+                images: ['images/profesionel1.jpg', 'images/profesionel2.jpg']
+            }
+        };
+
+        const overlay = document.getElementById('servicePopupOverlay');
+        const popupTitle = document.getElementById('servicePopupTitle');
+        const popupText = document.getElementById('servicePopupText');
+        const popupImages = document.getElementById('servicePopupImages');
+        const closeBtn = document.getElementById('servicePopupClose');
+
+        document.querySelectorAll('[data-popup]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var key = this.getAttribute('data-popup');
+                var data = popupData[key];
+                if (!data) return;
+                popupTitle.textContent = data.title;
+                popupText.innerHTML = data.text;
+                popupImages.innerHTML = '';
+                if (data.images.length > 0) {
+                    data.images.forEach(function(src) {
+                        var img = document.createElement('img');
+                        img.src = src;
+                        img.alt = data.title;
+                        img.loading = 'lazy';
+                        popupImages.appendChild(img);
+                    });
+                }
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeBtn.addEventListener('click', closePopup);
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) closePopup();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closePopup();
+        });
+
+        function closePopup() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Ouvrir le popup si un hash est présent dans l'URL (ex: services.html#loisirs)
+        var hash = window.location.hash.replace('#', '');
+        if (hash && popupData[hash]) {
+            var link = document.querySelector('[data-popup="' + hash + '"]');
+            if (link) link.click();
+        }
+    })();
+    </script>
 </body>
 </html>
