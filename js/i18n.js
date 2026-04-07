@@ -397,6 +397,16 @@ const DejuVuI18n = (function () {
 
       // === PAGE ASSOCIATION ===
       "assoc.title": "Innocence en Danger",
+      "assoc.hero_title": "Déjà Vu Switzerland soutient",
+      "assoc.hero_subtitle": "Innocence en Danger Suisse",
+      "assoc.hero_tagline": "Ensemble pour la protection de l'enfance",
+      "assoc.mission_title": "Notre Engagement",
+      "assoc.mission_p1": "<strong>Déjà vu Switzerland</strong> a rejoint le comité d'<strong>Innocence en danger Suisse</strong>. <strong>IED</strong> est un mouvement mondial de protection des enfants contre toutes formes de violences notamment sexuelles. L'organisation est présente dans de nombreux pays et partenaire d'associations internationales actives dans la lutte contre la pédo-criminalité.",
+      "assoc.mission_p2": "Venez soutenir le jeudi 16 septembre 2021 les actions d'IED Suisse qui concentre ses efforts sur la reconstruction émotionnelle des victimes grâce à ses séjours de résilience. L'association met gratuitement à disposition un réseau de juristes et thérapeutes et lutte avec ténacité pour la mise en place d'outils de protection en ligne plus adaptés aux risques encourus par les mineurs en Suisse.",
+      "assoc.president_title": "Un Mot sur la Présidente",
+      "assoc.president_p1": "En 1998, Madame Homayra Sellier a été nommée par le directeur de l'UNESCO présidente du « Mouvement de protection mondial de l'enfance » et chargée de mener un plan d'action mondial de défense et de protection des enfants, mis en place après le démantèlement d'un réseau d'exploitation international des enfants sur internet. C'était la naissance d'Innocence en Danger.",
+      "assoc.president_p2": "Après une année de collaboration fructueuse, Homayra a fondé sa propre organisation. Madame Sellier devait se rendre sur le terrain, rencontrer les victimes, leurs familles et réaliser un travail concret.",
+      "assoc.president_p3": "Des personnalités telles que <strong>Karl Zéro</strong> et <strong>Gad Elmaleh</strong> soutiennent cette association aux actions extraordinaires.",
     },
 
     // ==================== ENGLISH ====================
@@ -781,6 +791,16 @@ const DejuVuI18n = (function () {
       "hm.modal.ameublement.cta": "Transform your interior with us",
 
       "assoc.title": "Innocence in Danger",
+      "assoc.hero_title": "Déjà Vu Switzerland supports",
+      "assoc.hero_subtitle": "Innocence in Danger Switzerland",
+      "assoc.hero_tagline": "Together for the protection of children",
+      "assoc.mission_title": "Our Commitment",
+      "assoc.mission_p1": "<strong>Déjà Vu Switzerland</strong> has joined the committee of <strong>Innocence in Danger Switzerland</strong>. <strong>IED</strong> is a worldwide movement for the protection of children against all forms of violence, especially sexual violence. The organization is present in many countries and partners with international associations active in the fight against pedo-crime.",
+      "assoc.mission_p2": "On Thursday, September 16, 2021, come and support the actions of IED Switzerland, which focuses its efforts on the emotional reconstruction of victims through its resilience stays. The association provides a network of lawyers and therapists free of charge and fights tenaciously for the implementation of online protection tools better adapted to the risks incurred by minors in Switzerland.",
+      "assoc.president_title": "A Word about the President",
+      "assoc.president_p1": "In 1998, Mrs. Homayra Sellier was appointed by the director of UNESCO as president of the \"World Movement for the Protection of Children\" and was in charge of leading a global action plan for the defense and protection of children, set up after the dismantling of an international child exploitation network on the Internet. This was the birth of Innocence in Danger.",
+      "assoc.president_p2": "After a year of fruitful collaboration, Homayra founded her own organization. Ms. Sellier had to go to the field, meet the victims and their families and carry out concrete work.",
+      "assoc.president_p3": "Personalities such as <strong>Karl Zéro</strong> and <strong>Gad Elmaleh</strong> support this association with extraordinary actions.",
     },
 
     // ==================== DEUTSCH ====================
@@ -1165,6 +1185,16 @@ const DejuVuI18n = (function () {
       "hm.modal.ameublement.cta": "Verwandeln Sie Ihr Interieur mit uns",
 
       "assoc.title": "Unschuld in Gefahr",
+      "assoc.hero_title": "Déjà Vu Switzerland unterstützt",
+      "assoc.hero_subtitle": "Innocence in Danger Schweiz",
+      "assoc.hero_tagline": "Gemeinsam für den Schutz der Kinder",
+      "assoc.mission_title": "Unser Engagement",
+      "assoc.mission_p1": "<strong>Déjà Vu Switzerland</strong> ist dem Komitee von <strong>Innocence in Danger Schweiz</strong> beigetreten. <strong>IED</strong> ist eine weltweite Bewegung zum Schutz von Kindern vor allen Formen von Gewalt, insbesondere sexueller Gewalt. Die Organisation ist in vielen Ländern vertreten und Partner internationaler Verbände, die im Kampf gegen Pädokriminalität aktiv sind.",
+      "assoc.mission_p2": "Kommen Sie am Donnerstag, dem 16. September 2021, um die Aktionen von IED Schweiz zu unterstützen, die ihre Bemühungen auf den emotionalen Wiederaufbau der Opfer durch Resilienz-Aufenthalte konzentriert. Der Verein stellt kostenlos ein Netzwerk von Juristen und Therapeuten zur Verfügung und kämpft hartnäckig für die Einrichtung von Online-Schutztools, die besser an die Risiken angepasst sind, denen Minderjährige in der Schweiz ausgesetzt sind.",
+      "assoc.president_title": "Ein Wort über die Präsidentin",
+      "assoc.president_p1": "1998 wurde Frau Homayra Sellier vom Direktor der UNESCO zur Präsidentin der \"Weltbewegung zum Schutz der Kinder\" ernannt und beauftragt, einen globalen Aktionsplan zur Verteidigung und zum Schutz von Kindern zu leiten, der nach der Zerschlagung eines internationalen Ausbeutungsnetzwerks von Kindern im Internet eingerichtet wurde. Dies war die Geburt von Innocence in Danger.",
+      "assoc.president_p2": "Nach einem Jahr fruchtbarer Zusammenarbeit gründete Homayra ihre eigene Organisation. Frau Sellier musste vor Ort gehen, die Opfer und ihre Familien treffen und konkrete Arbeit leisten.",
+      "assoc.president_p3": "Persönlichkeiten wie <strong>Karl Zéro</strong> und <strong>Gad Elmaleh</strong> unterstützen diesen Verein mit außergewöhnlichen Aktionen.",
     }
   };
 
