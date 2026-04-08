@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="../css/cookie-popup.css">
 </head>
 <body class="services-page">
 
@@ -788,5 +789,19 @@ Notre équipe est toujours à l'affût de nouveautés et sera ravie de répondre
         }
     })();
     </script>
+
+    <!-- Cookie Consent Popup -->
+    <div class="cookie-popup theme-services">
+        <div class="cookie-popup-inner">
+            <h3 data-i18n="cookie.services.title">Un service tout compris !</h3>
+            <p data-i18n-html="cookie.services.text">Chez <strong>Déjà Vu Services</strong>, votre conciergerie s'occupe de tout — absolument tout, même des cookies ! Les nôtres ne se dégustent pas avec un thé, mais ils nous aident à anticiper vos envies et à rendre chaque visite aussi fluide qu'un voyage en première classe. Laissez-nous prendre soin de votre navigation.</p>
+            <div class="cookie-popup-buttons">
+                <button class="cookie-btn cookie-btn-accept" data-i18n="cookie.services.accept">J'accepte ce service</button>
+                <button class="cookie-btn cookie-btn-refuse" data-i18n="cookie.refuse">Non merci</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/cookie-popup.js"></script>
 </body>
 </html>

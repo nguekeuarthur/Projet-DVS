@@ -90,6 +90,21 @@ const DejuVuI18n = (function () {
       "index.cta_desc":  "Notre équipe d'experts est à votre disposition pour vous accompagner dans tous vos projets",
       "index.cta_btn":   "Nous Contacter",
 
+      // === COOKIE POPUPS ===
+      "cookie.refuse":               "Non merci",
+      "cookie.switzerland.title":    "Un petit cookie suisse ?",
+      "cookie.switzerland.text":     "Chez <strong>Déjà Vu Switzerland</strong>, on ne fait pas les choses à moitié — même pour les cookies ! Les nôtres ne fondent pas dans la bouche, mais ils nous aident à perfectionner votre expérience, comme un horloger ajuste ses mécanismes. Précision, discrétion et excellence… jusque dans vos paramètres de navigation.",
+      "cookie.switzerland.accept":   "J'accepte avec plaisir",
+      "cookie.home.title":           "Bienvenue chez vous !",
+      "cookie.home.text":            "Chez <strong>Déjà Vu Home</strong>, on trouve la maison de vos rêves… et on utilise aussi des cookies ! Pas ceux qu'on grignote au coin du feu, mais ceux qui nous permettent d'affiner votre recherche et de vous offrir un service immobilier sur mesure. Installez-vous confortablement.",
+      "cookie.home.accept":          "J'accepte, comme chez moi",
+      "cookie.services.title":       "Un service tout compris !",
+      "cookie.services.text":        "Chez <strong>Déjà Vu Services</strong>, votre conciergerie s'occupe de tout — absolument tout, même des cookies ! Les nôtres ne se dégustent pas avec un thé, mais ils nous aident à anticiper vos envies et à rendre chaque visite aussi fluide qu'un voyage en première classe. Laissez-nous prendre soin de votre navigation.",
+      "cookie.services.accept":      "J'accepte ce service",
+      "cookie.collection.title":     "Une pièce rare à accepter !",
+      "cookie.collection.text":      "Chez <strong>Déjà Vu Collection</strong>, on collectionne les merveilles — montres d'exception, œuvres d'art, bolides légendaires… et aussi des cookies ! Les nôtres n'ont pas de cote sur le marché de l'art, mais ils sont précieux pour personnaliser votre expérience et vous présenter les trésors qui vous correspondent.",
+      "cookie.collection.accept":    "J'accepte cette pièce",
+
       // === PAGE ÉQUIPE ===
       "equipe.hero_title":      "Portrait",
       "equipe.hero_lead":       "Malika C. David et son équipe accompagnent une clientèle exigeante en alliant discrétion, réseau international et savoir-faire opérationnel.",
@@ -489,6 +504,21 @@ const DejuVuI18n = (function () {
       "index.cta_desc":  "Our team of experts is at your disposal to accompany you in all your projects",
       "index.cta_btn":   "Contact Us",
 
+      // === COOKIE POPUPS ===
+      "cookie.refuse":               "No thanks",
+      "cookie.switzerland.title":    "A little Swiss cookie?",
+      "cookie.switzerland.text":     "At <strong>Déjà Vu Switzerland</strong>, we never do things by halves — not even cookies! Ours don't melt in your mouth, but they help us perfect your experience, like a watchmaker fine-tuning their mechanisms. Precision, discretion and excellence… right down to your browsing settings.",
+      "cookie.switzerland.accept":   "I accept with pleasure",
+      "cookie.home.title":           "Welcome home!",
+      "cookie.home.text":            "At <strong>Déjà Vu Home</strong>, we find the home of your dreams… and we also use cookies! Not the kind you nibble by the fire, but the ones that help us refine your search and offer you a tailor-made property service. Make yourself comfortable.",
+      "cookie.home.accept":          "I accept, make yourself at home",
+      "cookie.services.title":       "An all-inclusive service!",
+      "cookie.services.text":        "At <strong>Déjà Vu Services</strong>, your concierge takes care of everything — absolutely everything, even cookies! Ours aren't enjoyed with tea, but they help us anticipate your wishes and make every visit as smooth as a first-class journey. Let us take care of your browsing.",
+      "cookie.services.accept":      "I accept this service",
+      "cookie.collection.title":     "A rare piece to accept!",
+      "cookie.collection.text":      "At <strong>Déjà Vu Collection</strong>, we collect wonders — exceptional watches, works of art, legendary cars… and cookies too! Ours have no market value in the art world, but they are precious for personalising your experience and presenting the treasures that match you.",
+      "cookie.collection.accept":    "I accept this piece",
+
       "equipe.hero_title":      "Portrait",
       "equipe.hero_lead":       "Malika C. David and her team support a demanding clientele by combining discretion, international network and operational expertise.",
       "equipe.section_title":   "A team of experts and enthusiasts",
@@ -882,6 +912,21 @@ const DejuVuI18n = (function () {
       "index.cta_title": "Bereit, den Schritt zu wagen?",
       "index.cta_desc":  "Unser Expertenteam steht Ihnen zur Verfügung, um Sie bei allen Ihren Projekten zu begleiten",
       "index.cta_btn":   "Kontaktieren Sie uns",
+
+      // === COOKIE POPUPS ===
+      "cookie.refuse":               "Nein danke",
+      "cookie.switzerland.title":    "Ein kleines Schweizer Cookie?",
+      "cookie.switzerland.text":     "Bei <strong>Déjà Vu Switzerland</strong> machen wir nichts halbherzig — nicht einmal bei Cookies! Unsere schmelzen zwar nicht im Mund, aber sie helfen uns, Ihr Erlebnis zu perfektionieren, wie ein Uhrmacher seine Mechanismen justiert. Präzision, Diskretion und Exzellenz… bis in Ihre Browsereinstellungen.",
+      "cookie.switzerland.accept":   "Ich akzeptiere gerne",
+      "cookie.home.title":           "Willkommen zu Hause!",
+      "cookie.home.text":            "Bei <strong>Déjà Vu Home</strong> finden wir das Haus Ihrer Träume… und verwenden auch Cookies! Nicht die, die man am Kamin knabbert, sondern die, die uns helfen, Ihre Suche zu verfeinern und Ihnen einen maßgeschneiderten Immobilienservice zu bieten. Machen Sie es sich bequem.",
+      "cookie.home.accept":          "Ich akzeptiere, wie zu Hause",
+      "cookie.services.title":       "Ein Rundum-Service!",
+      "cookie.services.text":        "Bei <strong>Déjà Vu Services</strong> kümmert sich Ihre Concierge um alles — wirklich alles, sogar um Cookies! Unsere genießt man nicht zum Tee, aber sie helfen uns, Ihre Wünsche vorauszuahnen und jeden Besuch so reibungslos wie eine Reise in der ersten Klasse zu gestalten. Lassen Sie uns für Ihre Navigation sorgen.",
+      "cookie.services.accept":      "Ich akzeptiere diesen Service",
+      "cookie.collection.title":     "Ein seltenes Stück zum Akzeptieren!",
+      "cookie.collection.text":      "Bei <strong>Déjà Vu Collection</strong> sammeln wir Wunder — außergewöhnliche Uhren, Kunstwerke, legendäre Autos… und auch Cookies! Unsere haben keinen Marktwert in der Kunstwelt, aber sie sind wertvoll, um Ihr Erlebnis zu personalisieren und Ihnen die Schätze zu präsentieren, die zu Ihnen passen.",
+      "cookie.collection.accept":    "Ich akzeptiere dieses Stück",
 
       "equipe.hero_title":      "Porträt",
       "equipe.hero_lead":       "Malika C. David und ihr Team betreuen eine anspruchsvolle Kundschaft und verbinden Diskretion, internationales Netzwerk und operatives Know-how.",

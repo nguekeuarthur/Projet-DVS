@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/collection.css">
+    <link rel="stylesheet" href="../css/cookie-popup.css">
 </head>
 <body class="collection-page">
 
@@ -606,5 +607,19 @@
         }
     })();
     </script>
+
+    <!-- Cookie Consent Popup -->
+    <div class="cookie-popup theme-collection">
+        <div class="cookie-popup-inner">
+            <h3 data-i18n="cookie.collection.title">Une pièce rare à accepter !</h3>
+            <p data-i18n-html="cookie.collection.text">Chez <strong>Déjà Vu Collection</strong>, on collectionne les merveilles — montres d'exception, œuvres d'art, bolides légendaires… et aussi des cookies ! Les nôtres n'ont pas de cote sur le marché de l'art, mais ils sont précieux pour personnaliser votre expérience et vous présenter les trésors qui vous correspondent.</p>
+            <div class="cookie-popup-buttons">
+                <button class="cookie-btn cookie-btn-accept" data-i18n="cookie.collection.accept">J'accepte cette pièce</button>
+                <button class="cookie-btn cookie-btn-refuse" data-i18n="cookie.refuse">Non merci</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/cookie-popup.js"></script>
 </body>
 </html>
