@@ -672,13 +672,23 @@ html, body {
     /* === TÊTE-À-TÊTE MOBILE === */
     .teteatete-images {
         flex-direction: column;
-        gap: var(--spacing-sm);
+        gap: 0;
     }
 
     .teteatete-image-wrapper,
     .teteatete-image-wrapper.large {
         height: 300px;
         width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .teteatete-image-wrapper:first-child {
+        border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+    }
+
+    .teteatete-image-wrapper:last-child {
+        border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
     }
 
     .teteatete-image-wrapper.profile-card-overlay {
