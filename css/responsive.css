@@ -356,16 +356,22 @@ html, body {
     /* === HERO SECTION MOBILE === */
     .hero {
         min-height: 50vh;
+        height: auto;
         padding: 0;
     }
 
     .hero-content {
         padding: var(--spacing-md);
+        padding-bottom: 120px;
     }
 
     .hero-description {
         font-size: 14px;
-        line-height: 1.5;
+        line-height: 1.6;
+    }
+
+    .hero-description p {
+        margin-bottom: 8px;
     }
 
     .hero-slider-dots,
@@ -416,10 +422,14 @@ html, body {
     .flip-card-front h3 {
         font-size: 14px;
         min-height: auto;
+        line-height: 1.4;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .flip-card-back p {
         font-size: 14px;
+        line-height: 1.5;
     }
 
     /* Désactiver 3D flip sur mobile - slide-up overlay */
@@ -508,7 +518,7 @@ html, body {
     }
 
     .flip-container.mobile-active .flip-card-back {
-        max-height: 300px;
+        max-height: 500px;
         opacity: 1;
         padding: var(--spacing-md) !important;
     }
