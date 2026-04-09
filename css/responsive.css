@@ -395,6 +395,12 @@ html, body {
         height: auto;
         min-height: 200px;
         perspective: none;
+        position: relative;
+        z-index: 1;
+    }
+
+    .flip-container.mobile-active {
+        z-index: 10;
     }
 
     .card-icon,
