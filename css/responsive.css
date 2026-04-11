@@ -30,6 +30,12 @@ html, body {
     display: none;
 }
 
+/* === Fix bouton équipe page === */
+.page-team .team-left .btn-primary {
+    width: auto !important;
+    display: inline-block !important;
+}
+
 /* ========================================
    TABLET / MEDIUM SCREENS (768px - 1024px)
    ======================================== */
@@ -808,6 +814,20 @@ html, body {
     .about-section .container,
     .team-grid {
         grid-template-columns: 1fr;
+    }
+
+    .page-team .team-left .btn-primary {
+        display: inline-block;
+        width: auto !important;
+        max-width: fit-content;
+        padding: 12px 24px;
+        text-align: center;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .page-team .team-left {
+        display: block;
     }
 
     .about-section .container {
