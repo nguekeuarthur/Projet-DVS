@@ -2052,6 +2052,51 @@ p strong {
     margin-bottom: 0;
 }
 
+/* Keep WhatsApp CTA icon and label aligned on mobile and desktop */
+.service-modal .modal-scroll a[href*="wa.me"] {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    width: auto;
+    max-width: min(100%, 360px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-modal .modal-scroll a[href*="wa.me"] svg {
+    width: 20px !important;
+    height: 20px !important;
+    flex: 0 0 20px;
+    display: block;
+}
+
+.service-modal .modal-scroll a[href*="wa.me"] span {
+    display: inline-block !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
+    line-height: 1.2;
+}
+
+@media (max-width: 520px) {
+    .service-modal .modal-scroll a[href*="wa.me"] {
+        width: auto;
+        max-width: 100%;
+        padding: 13px 18px !important;
+        font-size: 14px !important;
+        gap: 8px !important;
+    }
+
+    .service-modal .modal-scroll a[href*="wa.me"] svg {
+        width: 19px !important;
+        height: 19px !important;
+        flex-basis: 19px;
+    }
+}
+
 /* Animation d'entrée pour les cards */
 .service-card {
     animation: fadeInUp 0.6s ease forwards;
